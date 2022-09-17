@@ -10,11 +10,14 @@ public class HelloSpringApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("myCoach1", Coach.class);
+		Coach theCoach = context.getBean("myCoach", Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
-		theCoach = context.getBean("myCoach2", Coach.class);
-		System.out.println(theCoach.getDailyWorkout());
+		
+		System.out.println(theCoach.getFortune());
 		context.close();
 	}
-
+	
+//convention over configuration
+	//spring mvc (design pattern) 
+	//dispatcher servelet in spring mvc
 }
